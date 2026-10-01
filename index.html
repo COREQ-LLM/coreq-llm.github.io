@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>COREQ+LLM: Reporting guideline for LLM use in qualitative research</title>
+<link rel="icon" type="image/png" href="Logo_COREQ_LLM2.png">
+<meta name="description" content="COREQ+LLM extends the COREQ checklist to support transparent reporting of large language model use in qualitative research. Manuscript under review.">
+<style>
+:root{--blue:#004F9F;--blue-dark:#003A75;--tint:#EAF1F9;--ink:#14202E;--muted:#55627A;--rule:#D3DDE9;--warn-bg:#FFF4D6;--warn-line:#B98100}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);background:#fff;font:1.05rem/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid #FFB000;outline-offset:2px}
+.notice{background:var(--warn-bg);border-bottom:2px solid var(--warn-line);padding:.6rem 1.25rem;font-size:.95rem;text-align:center}
+.hero{background:var(--blue);color:#fff;padding:4rem 1.25rem 3.5rem}
+.inner{max-width:48rem;margin:0 auto}
+.hero .inner{max-width:60rem;display:flex;align-items:center;gap:3rem}
+.hero-text{flex:1}
+.logo{width:15rem;height:15rem;flex:none;border-radius:50%;background:#fff;box-shadow:0 .5rem 2rem rgba(0,0,0,.25)}
+@media (max-width:760px){.hero .inner{flex-direction:column-reverse;align-items:flex-start;gap:1.75rem}.logo{width:10rem;height:10rem}}
+h1{font-size:clamp(2.4rem,7vw,4rem);line-height:1.05;margin:0 0 1rem;letter-spacing:-.025em}
+.hero p{font-size:1.2rem;margin:0 0 2rem;max-width:38rem;color:#E3ECF7}
+.btns{display:flex;flex-wrap:wrap;gap:.9rem}
+.btn{display:inline-block;padding:.9rem 1.6rem;border-radius:.4rem;font-weight:650;text-decoration:none;border:2px solid #fff}
+.btn.primary{background:#fff;color:var(--blue)}
+.btn.primary:hover{background:var(--tint)}
+.btn.ghost{color:#fff}
+.btn.ghost:hover{background:var(--blue-dark)}
+.btn small{display:block;font-weight:400;font-size:.8rem;opacity:.85}
+main{max-width:48rem;margin:0 auto;padding:2.5rem 1.25rem 3rem}
+details{border:1px solid var(--rule);border-radius:.5rem;margin-bottom:1rem;background:#fff}
+summary{cursor:pointer;list-style:none;padding:1.1rem 1.25rem;font-size:1.25rem;font-weight:650;color:var(--blue-dark);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:.6rem;height:.6rem;border-right:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:rotate(45deg);transition:transform .2s;flex:none;margin-top:-.2rem}
+details[open] summary::after{transform:rotate(-135deg);margin-top:.2rem}
+details[open] summary{border-bottom:1px solid var(--rule);background:var(--tint);border-radius:.5rem .5rem 0 0}
+.body{padding:.5rem 1.25rem 1.25rem}
+.body h3{font-size:1.05rem;margin:1.4rem 0 .3rem;color:var(--blue-dark)}
+.body ul{padding-left:1.2rem;margin:.4rem 0}
+.body li{margin:.3rem 0}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.9rem;margin:1rem 0}
+.person{background:var(--tint);border-radius:.4rem;padding:.8rem 1rem;font-size:.95rem;line-height:1.45}
+.person b{display:block;font-size:1rem}
+footer{background:var(--tint);border-top:1px solid var(--rule);padding:1.5rem 1.25rem;font-size:.9rem;color:var(--muted)}
+footer .inner{max-width:48rem}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="inner">
+    <div class="hero-text">
+    <h1>COREQ+LLM</h1>
+    <p>A reporting guideline that extends COREQ for the use of large language models in qualitative research.</p>
+    <div class="btns">
+          </div>
+    </div>
+    <img class="logo" src="Logo_COREQ_LLM2.png" width="240" height="240" alt="COREQ+LLM logo: speech bubble plus neural network, reporting guideline for LLM-supported qualitative research">
+  </div>
+</header>
+
+<main>
+
+<details>
+  <summary>Team and contact</summary>
+  <div class="body">
+    <p>COREQ+LLM was developed by a steering committee at Witten/Herdecke University, Germany.</p>
+    <div class="team">
+      <div class="person"><b>Leonard Fehring</b>PD, Dr med<br>Health Care Informatics, Witten/Herdecke University</div>
+      <div class="person"><b>Julian Frings</b>MPhil<br>Health Care Informatics, Witten/Herdecke University</div>
+      <div class="person"><b>Paul Rust</b>MSc, MPhil<br>Health Care Informatics, Witten/Herdecke University</div>
+      <div class="person"><b>Christian Kempny</b>MSc<br>Health Services Research, Witten/Herdecke University; Hamm-Lippstadt University of Applied Sciences</div>
+      <div class="person"><b>Petra A Thürmann</b>Prof Dr med<br>Clinical Pharmacology, Witten/Herdecke University</div>
+      <div class="person"><b>Sven Meister</b>Prof Dr<br>Health Care Informatics, Witten/Herdecke University; Fraunhofer ISST, Dortmund</div>
+    </div>
+    <h3>Contact</h3>
+    <p>Leonard Fehring<br>Health Care Informatics, Faculty of Health, School of Medicine<br>Witten/Herdecke University<br>Pferdebachstrasse 11, 58455 Witten, Germany<br><a href="mailto:leonard.fehring@uni-wh.de">leonard.fehring@uni-wh.de</a></p>
+  </div>
+</details>
+</main>
+
+<footer>
+</footer>
+</body>
+</html>
