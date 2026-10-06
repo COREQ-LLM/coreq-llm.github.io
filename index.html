@@ -17,7 +17,8 @@ a{color:var(--blue)}
 .inner{max-width:48rem;margin:0 auto}
 .hero .inner{max-width:60rem;display:flex;align-items:center;gap:3rem}
 .hero-text{flex:1}
-.logo{width:15rem;height:15rem;flex:none;border-radius:50%;background:#fff;box-shadow:0 .5rem 2rem rgba(0,0,0,.25)}
+.logo{width:15rem;height:15rem;flex:none;border-radius:50%;background:#fff;box-shadow:0 .5rem 2rem rgba(0,0,0,.25);display:block}
+.hero a:has(.logo){flex:none;line-height:0}
 @media (max-width:760px){.hero .inner{flex-direction:column-reverse;align-items:flex-start;gap:1.75rem}.logo{width:10rem;height:10rem}}
 h1{font-size:clamp(2.4rem,7vw,4rem);line-height:1.05;margin:0 0 1rem;letter-spacing:-.025em}
 .hero p{font-size:1.2rem;margin:0 0 2rem;max-width:38rem;color:#E3ECF7}
@@ -48,19 +49,94 @@ footer .inner{max-width:48rem}
 </head>
 <body>
 
+<div class="notice" role="note"><strong>Manuscript under review at the BMJ.</strong> The COREQ+LLM paper has not yet been published. Content, wording and checklist items on this page may change.</div>
+
+
 <header class="hero">
   <div class="inner">
     <div class="hero-text">
     <h1>COREQ+LLM</h1>
     <p>A reporting guideline that extends COREQ for the use of large language models in qualitative research.</p>
     <div class="btns">
-          </div>
+      <a class="btn primary" href="COREQ-LLM-checklist.xlsx" download>Download the checklist <small>PRELIMINARY</small></a>
+      <!-- TODO: replace "#" with the link to the original paper once available -->
+      <a class="btn ghost" href="https://www.medrxiv.org/content/10.64898/2026.10.01.26364479">Read the original paper <small>PREPRINT - under review</small></a>
+      <a class="btn ghost" href="items.html">User manual <small>item-by-item explanations</small></a>
     </div>
-    <img class="logo" src="Logo_COREQ_LLM2.png" width="240" height="240" alt="COREQ+LLM logo: speech bubble plus neural network, reporting guideline for LLM-supported qualitative research">
+    </div>
+    <a href="index.html" aria-label="COREQ+LLM home"><img class="logo" src="Logo_COREQ_LLM2.png" width="240" height="240" alt="COREQ+LLM logo: speech bubble plus neural network, reporting guideline for LLM-supported qualitative research"></a>
   </div>
 </header>
 
 <main>
+<details>
+  <summary>What is COREQ+LLM?</summary>
+  <div class="body">
+    <p>COREQ+LLM extends the established COREQ checklist (Consolidated Criteria for Reporting Qualitative Research) with reporting items for qualitative studies that use large language models (LLMs) as research tools. It was developed through a systematic scoping review, a two-round Delphi consensus process, and a virtual consensus conference with an international, interdisciplinary panel of experts in qualitative research, AI, medicine, ethics and journal editing.</p>
+
+    <h3>Why it is needed</h3>
+    <p>LLMs are increasingly used across the qualitative research process: to design interview guides, transcribe and translate data, support coding and thematic analysis, and even interact directly with qualitative datasets. Because LLMs generate text probabilistically rather than deterministically, can reproduce or amplify biases in their training data, and can confidently produce incorrect content ("hallucination"), their use raises new questions for transparency, reproducibility and interpretive trust. COREQ covers software use in a single item and does not capture these LLM-specific considerations.</p>
+
+    <h3>How it was developed</h3>
+    <p>A scoping review of peer-reviewed literature (January 2020&ndash;May 2025), conducted according to PRISMA-ScR, identified 149 studies using LLMs in qualitative health research. From this evidence, 29 candidate reporting items were drafted across seven categories. An international panel of experts then rated these items in two online Delphi rounds (141 and 115 valid responses), with remaining disagreements resolved in a virtual consensus conference. The resulting COREQ+LLM checklist comprises 31 items across seven categories. The full methods and Delphi results are reported in the COREQ+LLM manuscript; the scoping review methodology is described in the published <a href="https://doi.org/10.2196/78682">study protocol</a> (JMIR Research Protocols, 2025).</p>
+
+    <h3>Scope</h3>
+    <p>The guideline was developed with a focus on generative LLMs, such as the GPT family of models. The expert panel agreed that its principles are broadly applicable to other natural-language-processing techniques and architectures as well, including encoder-only models such as BERT. Not every item will be relevant to every study; authors can record an item as "not applicable" together with a brief justification.</p>
+  </div>
+</details>
+
+<details>
+  <summary>When to use COREQ+LLM?</summary>
+  <div class="body">
+    <h3>Use it when</h3>
+    <p>Your qualitative study uses an LLM as a research tool at any stage, for example to:</p>
+    <ul>
+      <li>formulate research questions or draft interview guides</li>
+      <li>transcribe or translate data</li>
+      <li>code data or identify themes</li>
+      <li>interact with qualitative datasets in dialogue</li>
+    </ul>
+
+    <h3>Who it is for</h3>
+    <ul>
+      <li>Authors planning or writing up LLM-supported qualitative studies</li>
+      <li>Reviewers and journal editors appraising such submissions</li>
+    </ul>
+
+    <h3>How it fits with COREQ</h3>
+    <p>COREQ+LLM is used together with COREQ, not instead of it. COREQ covers the general reporting of interviews and focus groups; COREQ+LLM covers the LLM-specific parts.</p>
+
+    <h3>Outside its scope</h3>
+    <p>Studies in which an LLM is only the object of evaluation (for example, benchmarking model performance) or which examine only perceptions of LLMs are not the target.</p>
+  </div>
+</details>
+
+<details>
+  <summary>How to use COREQ+LLM?</summary>
+  <div class="body">
+    <h3>Report alongside the original COREQ</h3>
+    <p>COREQ+LLM is used together with the original COREQ checklist, not instead of it. Report your study against the 32 original COREQ items for the general conduct of interviews or focus groups, and against the COREQ+LLM items for the LLM-specific parts of your workflow.</p>
+
+    <h3>Working through the checklist</h3>
+    <ul>
+      <li>Go through each item and report the requested information in your manuscript or in a supplementary reporting table</li>
+      <li>If an item does not apply to your study, mark it as "not applicable" and briefly say why</li>
+      <li>If you used more than one model, report each model and its role in the workflow</li>
+    </ul>
+    <p>For a detailed explanation of every item, see the <a href="items.html">item-by-item guide</a>.</p>
+
+    <h3>Download and cite</h3>
+    <p>Download the checklist using the button above. See &ldquo;How to cite the guideline?&rdquo; below for the recommended citation.</p>
+  </div>
+</details>
+
+<details>
+  <summary>How to cite the guideline?</summary>
+  <div class="body">
+    <p>While the COREQ+LLM manuscript is under review, please cite the preprint:</p>
+<p>Fehring, L., Frings, J., Rust, P., Kempny, C., Thuermann, P., Tamerler, E., & Meister, S. (2026). Reporting of Qualitative Research Using Large Language Models (COREQ+LLM): A Delphi-based Extension of the COREQ Reporting Guideline. <i>medRxiv</i>., 2026.2010.2001.26364479. doi: <a href="https://doi.org/10.64898/2026.10.01.26364479">10.64898/2026.10.01.26364479</a></p>
+  </div>
+</details>
 
 <details>
   <summary>Team and contact</summary>
@@ -81,6 +157,9 @@ footer .inner{max-width:48rem}
 </main>
 
 <footer>
+  <div class="inner">
+    <p><strong>Disclaimer:</strong> The COREQ+LLM manuscript is currently under review at the BMJ. This page and the provisional checklist may change before publication and should be cited as preliminary guideline.</p>
+  </div>
 </footer>
 </body>
 </html>
